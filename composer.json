@@ -1,6 +1,6 @@
 {
-    "require": {
+	"require": {
 		"php": "^7.1",
-        "timmyrs/phpcraft": "dev-master"
-    }
+		"timmyrs/phpcraft": "dev-master"
+	}
 }
