@@ -1,0 +1,4 @@
+{
+	"ignore": ["bin/", "docs/"],
+	"php_has_html": false
+}
