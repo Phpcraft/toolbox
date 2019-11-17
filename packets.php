@@ -1,7 +1,7 @@
 <?php /** @noinspection PhpUnhandledExceptionInspection */
 if(empty($argv[1]) || empty($argv[2]))
 {
-	die("Syntax: packets <recipient: client or server> <dump file>\n");
+	die("Syntax: packets <recipient: client or server> <file>\n");
 }
 require __DIR__."/_autoload.php";
 use Phpcraft\
