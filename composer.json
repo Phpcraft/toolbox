@@ -1,6 +1,6 @@
 {
 	"require": {
 		"php": "^7.1",
-		"timmyrs/phpcraft": "dev-master"
+		"craft/core": "*"
 	}
 }
