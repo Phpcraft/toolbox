@@ -5,7 +5,7 @@ if(empty($argv[1]))
 }
 require __DIR__."/_autoload.php";
 use Phpcraft\
-{Phpcraft, Versions};
+{ChatComponent, Phpcraft, Versions};
 echo "Phpcraft Server List Ping Tool\n\nResolving...";
 $server = Phpcraft::resolve($argv[1]);
 $serverarr = explode(":", $server);
@@ -22,7 +22,7 @@ if(empty($info))
 }
 if(isset($info["description"]))
 {
-	echo Phpcraft::chatToText($info["description"], 1)."\x1B[0m\n\n";
+	echo ChatComponent::cast($info["description"])->toString(ChatComponent::FORMAT_ANSI)."\e[0m\n\n";
 }
 else
 {
