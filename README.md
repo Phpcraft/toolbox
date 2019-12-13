@@ -20,6 +20,7 @@ Otherwise, you can also clone this repository and enjoy your single-directory to
 - `hex2bin <file>` converts hexadecimal strings to their binary representation.
 - `bin2hex <file>` converts binary strings to their hexadecimal representation.
 - `uuid <uuid>` shows the UUID with and without dashes, its hash code, and which skin type that equals.
+- `lanworlds` shows a live list of all LAN worlds.
 - `packets <recipient: client or server> <file>` prints packets from a recording, e.g. by the WorldSaver plugin for the Phpcraft client.
 
 On Linux and Mac OS, you can use piping to create chains like this:
