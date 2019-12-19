@@ -26,8 +26,26 @@ else
 {
 	$con->read_buffer = file_get_contents($argv[1]);
 }
-/** @noinspection PhpUnhandledExceptionInspection */
-$tag = $con->readNBT();
+try
+{
+	$tag = $con->readNBT();
+}
+catch(Exception $e)
+{
+	$con->read_buffer = @zlib_decode($con->read_buffer);
+	if(!$con->read_buffer)
+	{
+		die("Invalid NBT: ".$e->getMessage()."\nUncompressing failed.\n");
+	}
+	try
+	{
+		$tag = $con->readNBT();
+	}
+	catch(Exception $e_)
+	{
+		die("Invalid NBT.\nNormal reading threw: ".$e->getMessage()."\nUncompressed reading threw: ".$e_->getMessage()."\n");
+	}
+}
 if($con->read_buffer !== "")
 {
 	$bytes = strlen($con->read_buffer);
