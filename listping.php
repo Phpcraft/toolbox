@@ -26,13 +26,13 @@ if(isset($info["description"]))
 }
 else
 {
-	echo "This server has no description/MOTD.\n";
+	echo "The server has no description/MOTD.\n";
 }
 if(isset($info["version"]))
 {
 	if(isset($info["version"]["name"]))
 	{
-		echo "This server is running ".$info["version"]["name"].".";
+		echo "The server is running ".$info["version"]["name"].".";
 	}
 	else
 	{
