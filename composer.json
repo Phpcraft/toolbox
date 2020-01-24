@@ -1,6 +1,6 @@
 {
 	"require": {
 		"php": "^7.1",
-		"craft/core": "^0.4"
+		"craft/core": "^0.5"
 	}
 }
