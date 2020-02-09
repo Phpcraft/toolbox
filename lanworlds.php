@@ -1,6 +1,6 @@
 <?php
 require __DIR__."/_autoload.php";
-use pas\pas;
+use Asyncore\Asyncore;
 use Phpcraft\
 {ChatComponent, LanInterface};
 if(function_exists("sapi_windows_vt100_support"))
@@ -8,7 +8,7 @@ if(function_exists("sapi_windows_vt100_support"))
 	sapi_windows_vt100_support(STDOUT, true);
 }
 $li = new LanInterface();
-pas::add(function() use (&$li)
+Asyncore::add(function() use (&$li)
 {
 	$li->discover();
 	echo "\e[2J\e[H\e[m";
@@ -25,4 +25,4 @@ pas::add(function() use (&$li)
 		}
 	}
 }, 1.5, true);
-pas::loop();
+Asyncore::loop();
