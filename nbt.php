@@ -46,10 +46,10 @@ catch(Exception $e)
 		die("Invalid NBT.\nNormal reading threw: ".$e->getMessage()."\nUncompressed reading threw: ".$e_->getMessage()."\n");
 	}
 }
-if($con->read_buffer !== "")
+if($con->hasRemainingData())
 {
 	$bytes = strlen($con->read_buffer);
-	echo "Warning: NBT has been read, but {$bytes} byte".($bytes == 1 ? "" : "s")." remain".($bytes == 1 ? "s" : "").": ".bin2hex($con->read_buffer)."\n";
+	echo "Warning: NBT has been read, but {$bytes} byte".($bytes == 1 ? "" : "s")." remain".($bytes == 1 ? "s" : "").": ".bin2hex($con->getRemainingData())."\n";
 }
 echo "::: String Dump\n";
 echo $tag->__toString()."\n";
