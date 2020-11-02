@@ -2,6 +2,8 @@
 
 CLI tools all about Minecraft: Java Edition.
 
+> **This project has been abandoned!** The limited subset of 1.8.x - 1.15.x that has been implemented should work fine. If and how anything after that works is entirely dependant on what changed about the protocol.
+
 ## Installation
 
 I recommend you install Phpcraft Toolbox using [Cone](https://getcone.org), as it makes the tools accessable in any directory:
